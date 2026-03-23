@@ -21,8 +21,17 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'is_admin',
         'password',
+        'google_id',
+        'facebook_id',
+        'avatar',
     ];
+
+    public function paymentMethods()
+    {
+        return $this->hasMany(\App\Models\PaymentMethod::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
