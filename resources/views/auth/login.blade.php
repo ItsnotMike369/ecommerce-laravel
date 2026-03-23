@@ -100,12 +100,7 @@
         <!-- Navbar -->
         <nav class="navbar">
             <a href="{{ url('/') }}" class="navbar-brand">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="8" fill="#1a2340"/>
-                    <path d="M10 14h20M10 20h14M10 26h18" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-                    <circle cx="30" cy="26" r="5" fill="#3b82f6"/>
-                    <path d="M28 26l1.5 1.5L32 24" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="{{ asset('images/Shopline Logo.png') }}" alt="ShopLine" style="height:40px;width:auto;">
                 ShopLine
             </a>
             <div class="navbar-search">

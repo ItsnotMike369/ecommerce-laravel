@@ -20,8 +20,8 @@
             .page-title { font-size: 26px; font-weight: 700; color: #1a1a2e; margin-bottom: 28px; }
 
             /* ── Empty cart ── */
-            .empty-cart { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 80px 40px; text-align: center; }
-            .empty-cart svg { width: 64px; height: 64px; color: #ccc; margin-bottom: 20px; }
+            .empty-cart { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 80px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+            .empty-cart svg { width: 64px; height: 64px; color: #ccc; margin-bottom: 20px; display: block; }
             .empty-cart h2 { font-size: 20px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
             .empty-cart p { font-size: 14px; color: #888; margin-bottom: 28px; }
             .btn-continue { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; background: #1a1a2e; color: #fff; font-size: 14px; font-weight: 600; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
