@@ -8,19 +8,26 @@ return new class extends Migration
 {
     public function up(): void
     {
+        // All these columns are already present in create_users_table for fresh installs.
+        // This migration only runs the changes on existing databases that predate the consolidated schema.
         Schema::table('users', function (Blueprint $table) {
-            $table->string('google_id')->nullable()->after('password');
-            $table->string('facebook_id')->nullable()->after('google_id');
-            $table->string('avatar')->nullable()->after('facebook_id');
-            $table->string('password')->nullable()->change();
+            if (!Schema::hasColumn('users', 'google_id')) {
+                $table->string('google_id')->nullable()->after('password');
+                $table->string('facebook_id')->nullable()->after('google_id');
+                $table->string('avatar')->nullable()->after('facebook_id');
+                $table->string('password')->nullable()->change();
+            }
         });
     }
 
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['google_id', 'facebook_id', 'avatar']);
-            $table->string('password')->nullable(false)->change();
+            foreach (['google_id', 'facebook_id', 'avatar'] as $col) {
+                if (Schema::hasColumn('users', $col)) {
+                    $table->dropColumn($col);
+                }
+            }
         });
     }
 };
