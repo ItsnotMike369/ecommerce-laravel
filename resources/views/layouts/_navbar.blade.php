@@ -5,7 +5,7 @@
             var link = document.createElement('link');
             link.rel = 'icon';
             link.type = 'image/png';
-            link.href = '/images/Shopline Logo.png';
+            link.href = '/images/shopline-logo.png';
             document.head.appendChild(link);
         }
     })();
@@ -61,7 +61,7 @@
     <!-- Middle row -->
     <div class="shopnav-middle">
         <a href="{{ url('/') }}" class="shopnav-brand">
-            <img src="{{ asset('images/Shopline Logo.png') }}" alt="ShopLine" style="height:40px;width:auto;">
+            <img src="{{ asset('images/shopline-logo.png') }}" alt="ShopLine" style="height:40px;width:auto;">
             ShopLine
         </a>
 

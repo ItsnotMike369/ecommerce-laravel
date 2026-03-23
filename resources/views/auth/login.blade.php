@@ -100,7 +100,7 @@
         <!-- Navbar -->
         <nav class="navbar">
             <a href="{{ url('/') }}" class="navbar-brand">
-                <img src="{{ asset('images/Shopline Logo.png') }}" alt="ShopLine" style="height:40px;width:auto;">
+                <img src="{{ asset('images/shopline-logo.png') }}" alt="ShopLine" style="height:40px;width:auto;">
                 ShopLine
             </a>
             <div class="navbar-search">
