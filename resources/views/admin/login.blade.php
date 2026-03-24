@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/shopline-logo.png">`n    <link rel="icon" type="image/png" href="/images/shopline-logo.png">
     <title>Admin Login - ShopLine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -129,7 +130,11 @@
         <h2 class="card-title">Administrator Login</h2>
         <p class="card-sub">Enter your credentials to access the admin panel</p>
 
-        @if ($errors->any())
+        @if ($errors->has('session'))
+            <div class="alert-error" style="background:#fef3c7;border-color:#fcd34d;color:#92400e;">
+                {{ $errors->first('session') }}
+            </div>
+        @elseif ($errors->any())
             <div class="alert-error">{{ $errors->first() }}</div>
         @endif
 
